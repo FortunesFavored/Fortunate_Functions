@@ -36,6 +36,7 @@ def newplot():
         return render_template('graph.html', title=title, image=pngImageB64String, slope=form.slope.data, exp=form.exponent.data)
     return render_template('newplot.html', title=title, form=form)
 
+### For file uploads look into reading the csv/txt
 
     
 
