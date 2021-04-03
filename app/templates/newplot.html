@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="banner-index-pic">
+    <div class="header-text-index-pic">
+    <h1 class="header-text">NEWPLOT!</h1>
+    <h2>Helloworld</h2>
+
+        <h1>Slope and Exponent Values</h1>
+        <form action="" method="POST">
+            <fieldset>
+                {{ form.slope.label }}
+                {{ form.slope(class="form-control", placeholder="Slope") }}
+            </fieldset>
+            <fieldset>
+                {{ form.exponent.label }}
+                {{ form.exponent(class="form-control", placeholder="Exponent") }}
+            </fieldset>
+            {{ form.submit(class="btn regbtn")}}
+        </form>
+
+
+
+
+
+
+
+        <h1>File Upload Section</h1>
+        <form action="" method='POST'>
+            <p><input type="file" name="file" accept=".txt, .csv"></p>
+            <p><input type="submit" value="Submit"></p>
+        </form>
+
+    </div>
+</div>
+
+
+{% endblock content %}
