@@ -1,16 +1,18 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="banner-index-pic">
-    {% if slope == 69 or exp == 69 %}
-        <h1>Your curve is NOICE!!!</h1>
-    {% endif %}
-    <div class="header-text-index-pic">
-    <h1 class="header-text">We Made a Graph!</h1>
-    <img src="{{ image }}" alt="">
-    <h2>Helloworld</h2>
-    </div>
-</div>
+
+{% if data != None %}
+
+    <h1>Data is True</h1>
+    
+{% endif %}
+
+<h1>File Upload Section</h1>
+        <form action="" method='POST' enctype="multipart/form-data">
+            <p><input type="file" name="file" accept=".txt, .csv"></p>
+            <p><input type="submit" value="Submit"></p>
+        </form>
 
 
 {% endblock content %}

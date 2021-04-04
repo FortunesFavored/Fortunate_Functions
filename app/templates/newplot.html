@@ -18,9 +18,19 @@
             </fieldset>
             {{ form.submit(class="btn regbtn")}}
         </form>
+        
+        <div class="banner-index-pic">
+            {% if slope == 69 or exp == 69 %}
+                <h1>Your curve is NOICE!!!</h1>
+            {% endif %}
+            <div class="header-text-index-pic">
+            <h1 class="header-text">We Made a Graph!</h1>
+            <img src="{{ image }}" alt="">
+            <h2>Helloworld</h2>
+            </div>
+        </div>
 
-
-
+<!-- 
 
 
 
@@ -29,7 +39,7 @@
         <form action="" method='POST'>
             <p><input type="file" name="file" accept=".txt, .csv"></p>
             <p><input type="submit" value="Submit"></p>
-        </form>
+        </form> -->
 
     </div>
 </div>

@@ -22,9 +22,11 @@ def index():
 
 @App.route('/graph', methods = ['GET', 'POST'])
 def graph():
-    title = 'HOME'
-    pngImageB64String = plotView()
-    return render_template('graph.html', title=title, image=pngImageB64String)
+    title = 'Custom Data'
+    Data = DataFile()
+    if request.method =='POST' and request.files['file'].filename != '':
+        return render_template('graph.html', title=title, data=Data)
+    return render_template('graph.html', title=title, data=None)
 
 @App.route('/newplot', methods = ['GET', 'POST'])
 def newplot():
@@ -33,8 +35,9 @@ def newplot():
     if request.method == 'POST':
         form = Variables()
         pngImageB64String = plotView(form.exponent.data, form.slope.data)
-        return render_template('graph.html', title=title, image=pngImageB64String, slope=form.slope.data, exp=form.exponent.data)
-    return render_template('newplot.html', title=title, form=form)
+        return render_template('newplot.html', title=title, form=form, image=pngImageB64String, slope=form.slope.data, exp=form.exponent.data)
+    pngImageB64String = plotView()
+    return render_template('newplot.html', title=title, form=form, image=pngImageB64String)
 
 ### For file uploads look into reading the csv/txt
 
