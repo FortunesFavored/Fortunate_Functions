@@ -8,5 +8,20 @@
     </div>
 </div>
 
+<h1>Your Unique Equation Generator</h1>
+        <form action="" method="POST">
+            <fieldset>
+                {{ form.equation.label }}
+                {{ form.equation(class="form-control", placeholder="") }}
+            </fieldset>
+            {{ form.submit(class="btn regbtn")}}
+        </form>
 
+        <div class="banner-index-pic">
+            <div class="header-text-index-pic">
+            <h1 class="header-text">We Made a Graph!</h1>
+            <img src="{{ image }}" alt="">
+            <h2>Helloworld</h2>
+            </div>
+        </div>
 {% endblock content %}
