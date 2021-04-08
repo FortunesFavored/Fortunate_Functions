@@ -2,44 +2,50 @@
 
 {% block content %}
 <div class="banner-index-pic">
-    <div class="header-text-index-pic">
-    <h1 class="header-text">NEWPLOT!</h1>
-    <h2>Helloworld</h2>
+    <div class="graph_cards">
 
-        <h1>Slope and Exponent Values</h1>
-        <form action="" method="POST">
-            <fieldset>
-                {{ form.slope.label }}
-                {{ form.slope(class="form-control", placeholder="Slope") }}
-            </fieldset>
-            <fieldset>
-                {{ form.exponent.label }}
-                {{ form.exponent(class="form-control", placeholder="Exponent") }}
-            </fieldset>
-            {{ form.submit(class="btn regbtn")}}
-        </form>
-        
-        <div class="banner-index-pic">
-            {% if slope == 69 or exp == 69 %}
-                <h1>Your curve is NOICE!!!</h1>
-            {% endif %}
-            <div class="header-text-index-pic">
-            <h1 class="header-text">We Made a Graph!</h1>
-            <img src="{{ image }}" alt="">
-            <h2>Helloworld</h2>
+        <div class="card" style="width: 18rem;">
+            <img src="{{ linImg }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <form action="" method="POST">
+                    <fieldset>
+                        {{ form1.slope.label }}
+                        {{ form1.slope(class="form-control", placeholder="Slope") }}
+                    </fieldset>
+                    <fieldset>
+                        {{ form1.intercept.label }}
+                        {{ form1.intercept(class="form-control", placeholder="intercept") }}
+                    </fieldset>
+                    {{ form1.submit(class="btn btn-primary")}}
+                </form>
             </div>
-        </div>
+          </div>
+        
+          <div class="card" style="width: 18rem;">
+            <img src="{{ bellImg }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Bell Curves</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <form action="" method="POST">
+                    <fieldset>
+                        {{ form2.sq_a.label }}
+                        {{ form2.sq_a(class="form-control", placeholder="A") }}
+                    </fieldset>
+                    <fieldset>
+                        {{ form2.sq_b.label }}
+                        {{ form2.sq_b(class="form-control", placeholder="B") }}
+                    </fieldset>
+                    <fieldset>
+                        {{ form2.sq_c.label }}
+                        {{ form2.sq_c(class="form-control", placeholder="C") }}
+                    </fieldset>
+                    {{ form2.submit(class="btn btn-primary")}}
+                </form>
+            </div>
+          </div>
 
-<!-- 
-
-
-
-
-        <h1>File Upload Section</h1>
-        <form action="" method='POST'>
-            <p><input type="file" name="file" accept=".txt, .csv"></p>
-            <p><input type="submit" value="Submit"></p>
-        </form> -->
 
     </div>
 </div>

@@ -6,9 +6,15 @@ from wtforms.validators import DataRequired
 class Equation(FlaskForm):
     equation = StringField('Your Awesome Equation')
     submit = SubmitField()
-class Variables(FlaskForm):
+class LineVariables(FlaskForm):
     slope = FloatField('Slope')
-    exponent = FloatField('Exponent')
+    intercept = FloatField('intercept')
+    submit = SubmitField()
+
+class BellVariables(FlaskForm):
+    sq_a = FloatField('A')
+    sq_b = FloatField('B')
+    sq_c = FloatField('C')
     submit = SubmitField()
 
 class DataFile(FlaskForm):

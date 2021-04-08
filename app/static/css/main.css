@@ -1,0 +1,5 @@
+.graph_cards{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+}

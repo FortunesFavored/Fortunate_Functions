@@ -4,7 +4,13 @@
 
 {% if data != None %}
 
-    <h1>Data is True</h1>
+    <h1>Your File Has been uploaded below.</h1>
+    
+{% endif %}
+
+{% if error != None %}
+
+    <h1>{{ error }}</h1>
     
 {% endif %}
 
@@ -14,5 +20,13 @@
             <p><input type="submit" value="Submit"></p>
         </form>
 
+        {% if data != None %}
+            {% for table in tables %}
+                {{titles[loop.index]}}
+                {{ table|safe }}
+            {% endfor %}
+        {% endif %}
+
 
 {% endblock content %}
+
