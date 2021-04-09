@@ -9,6 +9,7 @@ from matplotlib.figure import Figure
 from IPython.display import HTML
 import io
 import base64
+import re
 
 
 @App.route('/', methods = ['GET', 'POST'])
@@ -16,10 +17,11 @@ import base64
 def index():
     title = 'HOME'
     form = Equation()
-    if request.method =='POST' and form.equation.data != '':
+    
+    if request.method =='POST' and form.equation.data != '' and re.findall("[^x0-9\^\/\*\-\+]",form.equation.data) == []:
         homeGraph = plotCustomEquation(form.equation.data)
         return render_template('index.html', title=title,form=form, image=homeGraph)
-    homeGraph = plotXView()
+
     return render_template('index.html', title=title, form=form)
 
 @App.route('/graph', methods = ['GET', 'POST'])

@@ -3,25 +3,27 @@
 {% block content %}
 <div class="banner-index-pic">
     <div class="header-text-index-pic">
-    <h1 class="header-text">NOW THE FUN BEGINS!</h1>
-    <h2>Helloworld</h2>
+        <h1>Your Unique Equation Generator</h1>
     </div>
+    
+    <form  action="" method="POST">
+        <fieldset>
+            {{ form.equation.label }}
+            {{ form.equation(class="form-control", placeholder="What cool equation do you want to plot a section of?") }}
+        </fieldset>
+        {{ form.submit(class="btn btn-primary format_style")}}
+    </form>
 </div>
 
-<h1>Your Unique Equation Generator</h1>
-        <form action="" method="POST">
-            <fieldset>
-                {{ form.equation.label }}
-                {{ form.equation(class="form-control", placeholder="") }}
-            </fieldset>
-            {{ form.submit(class="btn btn-primary")}}
-        </form>
+    {% if image %}
 
-        <div class="banner-index-pic">
-            <div class="header-text-index-pic">
-            <h1 class="header-text">We Made a Graph!</h1>
-            <img src="{{ image }}" alt="">
-            <h2>Helloworld</h2>
-            </div>
+    <div class="banner-index-pic main_graph">
+        <div class="header-text-index-pic">
+            <h1 class="header-text">Here is your equation!</h1>
+            <img class="index_img" src="{{ image }}" alt="">
         </div>
+    </div>
+
+    {% endif %}
+
 {% endblock content %}

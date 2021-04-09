@@ -4,7 +4,7 @@ from wtforms import StringField, SubmitField, BooleanField, IntegerField, FloatF
 from wtforms.validators import DataRequired
 
 class Equation(FlaskForm):
-    equation = StringField('Your Awesome Equation')
+    equation = StringField('')
     submit = SubmitField()
 class LineVariables(FlaskForm):
     slope = FloatField('Slope')

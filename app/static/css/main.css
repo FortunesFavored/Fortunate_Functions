@@ -3,3 +3,16 @@
     flex-flow: row;
     justify-content: space-evenly;
 }
+
+.main_graph{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+}
+
+.format_style{
+    margin: 10px;
+    display: flex;
+    flex-flow: column !important; 
+    justify-content: center;
+}
